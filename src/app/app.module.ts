@@ -5,15 +5,12 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './core/component/navbar/navbar.component';
-import { Error404Component } from './error404/error404.component';
 import { CourseModule } from './courses/course.module';
 import { CoreModule } from './core/component/core.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    Error404Component,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +21,6 @@ import { CoreModule } from './core/component/core.module';
       {
         path: '', redirectTo: 'courses', pathMatch: 'full'
       },
-      {
-        path: '**', component: Error404Component
-      }
     ])
   ],
   providers: [],
